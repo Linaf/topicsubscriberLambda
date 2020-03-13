@@ -15,7 +15,7 @@ type Message struct {
 	LastName int64  `json:"lastName"`
 }
 func handler(c context.Context, e events.SNSEvent) {
-	log.Info("Started  LRU Raw log extractor lambda ...\n")
+
 	for _, record := range e.Records {
 		snsRecord := record.SNS
 
